@@ -1,0 +1,105 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(600px at center, #1d4ed826, transparent 80%);
+  position: relative;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+  }
+
+  &__square {
+    height: 2rem;
+    width: 2rem;
+    background: transparent;
+    border: 3px solid $color-secondary;
+    animation: rotate 3s linear infinite;
+  }
+
+  &__line {
+    width: 2rem;
+    height: 3px;
+    background-color: $color-secondary;
+    animation: rotate 3s linear infinite;
+  }
+
+  &__cross {
+    width: 3rem;
+    height: 3rem;
+    animation: rotate 3s linear infinite;
+
+    &::before {
+      content: '';
+      width: 3rem;
+      height: 3px;
+      background-color: $color-secondary;
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: '';
+      width: 3rem;
+      height: 3px;
+      background-color: $color-secondary;
+      display: block;
+      transform-origin: 50% 50%;
+      transform: rotate(90deg) translateX(-1.5px);
+      position: absolute;
+      top: 50%;
+    }
+  }
+
+  &__circle {
+    height: 3rem;
+    width: 3rem;
+    background: transparent;
+    border-radius: 50%;
+    border: 3px solid $color-secondary;
+    color: $color-secondary;
+    border-color: currentColor currentColor transparent transparent;
+    animation: rotate 1.5s linear infinite;
+  }
+
+  &__mouse {
+    height: 5rem;
+    width: 3rem;
+    border: 3px solid $color-secondary;
+    border-radius: 15px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      background-color: $color-secondary;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__cable {
+      position: absolute;
+      top: -20px;
+      left: calc(50% - 25px);
+      animation: shake 1s linear infinite;
+    }
+
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+  }
+}

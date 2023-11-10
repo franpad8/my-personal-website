@@ -1,0 +1,50 @@
+.btn {
+  background: transparent;
+  
+  &:link,
+  &:visited {
+    text-decoration: none;
+    border: none;
+    outline: none;
+  }
+
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.scroll-down {
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $color-secondary;
+
+  &:hover .scroll-down__icon {
+    transform: translateY(1rem);
+  }
+
+  &:hover .scroll-down__text {
+    opacity: 1;
+  }
+
+  &__text {
+    opacity: 0;
+    transition: opacity .2s .1s;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  &__icon {
+    display: inline-block;
+    font-size: 4rem;
+    transition: transform .3s;
+    line-height: .4;
+  }
+}

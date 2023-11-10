@@ -1,0 +1,87 @@
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  /* Timeline vertical line */
+  &:before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: $color-secondary;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    position: absolute;
+    
+  }
+
+  /* Triangule at the bottom of the vertical line */
+  &:after {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: $color-secondary;
+    bottom: 0px;
+    right: 50%;
+    transform: translate(52%, 100%);
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 5rem 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+
+    &:nth-child(even) {
+      .experience-timeline__time {
+        justify-self: self-end;
+        order: 1;
+      }
+      .experience-timeline__icon {
+        order: 2;
+      }
+      .experience {
+        order: 3;
+      }
+    }
+  }
+
+  &__icon {
+    background: $color-white;
+    width: 6rem;
+    height: 6rem;
+    z-index: 1;
+    position: relative;
+    border-radius: 50%;
+    fill: $color-primary;
+    transition: all .2s;
+
+    & > svg {
+      width: 3rem;
+      height: 3rem;
+      transform: translate(50%, 50%);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__time {
+    justify-self: self-start;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 2rem;
+  }
+}
+
+.experience:hover ~ .experience-timeline__icon {
+  fill: $color-white;
+  background-color: $color-secondary;
+};

@@ -1,0 +1,52 @@
+.section-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-black;
+  padding: 10rem 0;
+
+  .section-line {
+    margin-bottom: 5rem;
+  }
+
+  .gallery {
+    align-self: stretch;
+  }
+}
+
+.skills {
+  margin-top: 4rem;
+  width: 60%;
+  margin: 10rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+
+  &__title {
+    font-size: 2.6rem;
+    color: $color-white;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__list {
+    color: $color-white;
+    list-style: none;
+    margin-left: 1rem;
+  
+    
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: .5rem;
+
+    &__icon {
+      color: $color-secondary;
+    }
+  }
+}
