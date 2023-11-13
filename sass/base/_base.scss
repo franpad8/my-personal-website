@@ -12,6 +12,10 @@ html {
   font-weight: 400;
   line-height: 1.6;
   color: $color-grey;
+
+  @include respond_to($bp-sm) {
+    font-size: 55%;
+  }
 }
 
 body {

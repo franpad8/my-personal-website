@@ -1,0 +1,6 @@
+@mixin respond_to($breakpoint) {
+
+  @media only screen and (width<=$breakpoint) {
+    @content
+  }
+}
