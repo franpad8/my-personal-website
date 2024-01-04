@@ -30,3 +30,9 @@ body {
   grid-template-rows: 100vh min-content;
   grid-template-columns: [full-start]1fr[full-end];
 }
+
+a {
+  &:active, &:link, &:visited  {
+    text-decoration: none;
+  }
+}

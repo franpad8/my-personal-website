@@ -74,6 +74,10 @@ body {
   grid-template-columns: [full-start] 1fr [full-end];
 }
 
+a:active, a:link, a:visited {
+  text-decoration: none;
+}
+
 .heading--primary {
   color: #e2e8f0;
   font-weight: 700;
@@ -188,12 +192,17 @@ body {
 
 .experience {
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   max-width: 50rem;
   border-radius: 4px;
   transition: all 0.2s;
+}
+.experience__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.experience__link {
+  color: #94a3b8;
 }
 .experience:hover {
   background-color: rgba(30, 41, 59, 0.5);
@@ -202,6 +211,10 @@ body {
 }
 .experience:hover .experience__position {
   color: #5eead4;
+}
+.experience:hover .experience__picture {
+  filter: brightness(1);
+  border-color: #e2e8f0;
 }
 .experience__tools {
   list-style: none;
@@ -215,6 +228,23 @@ body {
   padding: 0.5rem 0.75rem;
   border-radius: 15px;
   font-size: 1.2rem;
+}
+.experience__picture {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 30rem;
+  height: 20rem;
+  align-self: center;
+  margin-bottom: 2rem;
+  border: 2px solid #94a3b8;
+  filter: brightness(0.8);
+  transition: all 0.2s;
+  margin: 0 auto 3rem auto;
+}
+.experience__picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .experience-timeline {
@@ -721,6 +751,22 @@ body {
 }
 .skills__item__icon {
   color: #5eead4;
+}
+
+.section-side-projects {
+  padding: 10rem;
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-projects {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
