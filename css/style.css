@@ -451,7 +451,7 @@ a:active, a:link, a:visited {
 }
 
 .footer {
-  background: #1b1b1b;
+  background: #0f172a;
   padding: 10rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
